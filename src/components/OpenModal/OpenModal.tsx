@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Modal } from '../Modal/Modal';
 import { useTranslation } from 'react-i18next';
 
@@ -21,14 +22,23 @@ export const OpenModal = (): React.ReactElement => {
     const { t } = useTranslation();
 
     return (
-        <>
-            <input onChange={handleChange} value={inputValue} type="text" />
-            <div className={s.openButton}>
-                <button onClick={() => handleClick()}>{t(`buttons.openModal`)}</button>
-            </div>
-            <Modal visible={isOpen} setIsOpen={setIsOpen}>
+        <div className={s.block}>
+            <input className={s.input} onChange={handleChange} value={inputValue} type="text" />
+
+            <button className={s.button} onClick={() => handleClick()}>
+                {t(`buttons.openModal`)}
+            </button>
+
+            {/* <Modal visible={isOpen} setIsOpen={setIsOpen}>
                 {content}
-            </Modal>
-        </>
+            </Modal> */}
+            {isOpen &&
+                createPortal(
+                    <Modal visible={isOpen} setIsOpen={setIsOpen}>
+                        {content}
+                    </Modal>,
+                    document.body
+                )}
+        </div>
     );
 };

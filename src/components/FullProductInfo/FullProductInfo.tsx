@@ -26,7 +26,7 @@ export const FullProductInfo = ({
     category = 'Приключения',
     price = 900,
 }: FullProductProps): React.ReactElement => {
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
 
     return (
         <div className={s.product}>
@@ -34,9 +34,9 @@ export const FullProductInfo = ({
                 <img src={imageSrc} alt="Product Image" />
             </div>
             <div className={s.info}>
-                <div className={s.name}>{t(`product.name`)}</div>
-                <div className="descr">{t(`product.descr`)}</div>
-                <div className={s.category}>{t(`product.category`)}</div>
+                <div className={s.name}>{name}</div>
+                <div className="descr">{descrContent}</div>
+                <div className={s.category}>{category}</div>
             </div>
             <div className={s.priceBlock}>
                 <div className={s.price}>{price}</div>

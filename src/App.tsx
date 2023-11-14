@@ -6,7 +6,7 @@ import { FullProductInfo } from './components/FullProductInfo/FullProductInfo';
 import { Layout } from './components/Layout/Layout';
 import { ShortProductInfo } from './components/ShortProductInfo/ShortProductInfo';
 import { OpenModal } from './components/OpenModal/OpenModal';
-import { ProductList } from './components/ProductList/ProductList';
+import { BookList } from './components/BookList/BookList';
 
 import { ThemeProvider } from './theming/ThemeProvider';
 import { LangProvider } from './localization/LocalizationProvider';
@@ -37,8 +37,6 @@ function App() {
         price: 900,
     };
 
-    
-
     const [isOpen, setIsOpen] = useState(false);
 
     const blabla = [
@@ -48,19 +46,19 @@ function App() {
     return (
         <ThemeProvider>
             <LangProvider>
-                {/* <Layout /> */}
+                <Layout />
                 {/* <Modal visible={true} setIsOpen={setIsOpen}>
                 Hello
             </Modal> */}
                 {/* <Cart count={0} disabled={false} /> */}
                 {/* <Delete /> */}
-                <FullProductInfo
+                {/* <FullProductInfo
                     imageSrc={exampleProduct.imageSrc}
                     name={exampleProduct.name}
                     descrContent={exampleProduct.descrContent}
                     category={exampleProduct.category}
                     price={exampleProduct.price}
-                />
+                /> */}
 
                 {/* <ShortProductInfo
                     imageSrc={exampleProduct.imageSrc}
@@ -68,8 +66,8 @@ function App() {
                     descrContent={exampleProduct.descrContent}
                     price={exampleProduct.price}
                 /> */}
-                {/* <OpenModal /> */}
-                <ProductList items={blabla} />
+                <OpenModal />
+                <BookList />
             </LangProvider>
         </ThemeProvider>
     );
