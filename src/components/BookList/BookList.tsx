@@ -4,11 +4,11 @@ import { useInView } from 'react-intersection-observer';
 import { FullProductInfo } from '../FullProductInfo/FullProductInfo';
 import { RotatingLines } from 'react-loader-spinner';
 
-import { useThemeContext } from 'src/theming/ThemeProvider';
+import { useThemeContext } from '../../theming/ThemeProvider';
 
 import s from './bookList.module.scss';
 
-import { books as bookList } from 'src/api/books';
+import { books as bookList } from '../../api/books';
 
 export const BookList = (): React.ReactNode => {
     const { theme } = useThemeContext();
