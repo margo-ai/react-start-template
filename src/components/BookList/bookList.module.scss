@@ -1,0 +1,10 @@
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+}
+
+.list_loader {
+    display: flex;
+    justify-content: center;
+}

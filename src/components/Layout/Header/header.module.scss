@@ -1,0 +1,15 @@
+@import '../../../styles/common.scss';
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    padding: 20px 160px;
+    margin: 0 auto;
+    @include theme(background-color, headerBg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

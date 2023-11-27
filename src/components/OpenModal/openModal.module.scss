@@ -1,0 +1,27 @@
+@import '../../styles/common.scss';
+
+.block {
+    display: flex;
+    margin: 20px 30px;
+}
+
+.button {
+    cursor: pointer;
+    padding: 14px 24px;
+    // background-color: rgba(255, 133, 139, 1);
+    @include theme(background-color, headerBg);
+    @include theme(border, border);
+    border-radius: 5px;
+    color: #fff;
+    opacity: 1;
+    transition: all ease 0.5s;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.input {
+    width: 250px;
+    padding: 10px;
+    margin-right: 15px;
+}
